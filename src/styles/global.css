@@ -131,9 +131,8 @@ hr {
 }
 @media (max-width: 720px) {
 	h1 {
-        font-size: 5vh; /* Scales font size based on viewport height */
-        line-height: 1.2; /* Maintain readability */
-        margin: 0; /* Remove default margins */
+        font-size: 2.441em;
+        margin: 0; 
 	}
 	body {
 		font-size: 18px;
