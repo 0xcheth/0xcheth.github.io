@@ -131,8 +131,7 @@ hr {
 }
 @media (max-width: 720px) {
 	h1 {
-		font-size: 5.5vh; /* Scales font size based on viewport height */
-        margin: 1 auto; /* Center align if needed */
+		font-size: 6vh; /* Scales font size based on viewport height */
 	}
 	body {
 		font-size: 18px;
