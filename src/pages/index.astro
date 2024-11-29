@@ -1,0 +1,33 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import './src/assets/images/campfire2.webp';
+---
+<!-- campfire2.webp/campfire1.webp files converted from gifs aquired through https://tenor.com/view/dark-souls-knight-rest-here-weary-rest-here-weary-one-gif-19874929 & https://tenor.com/view/anime-frieren-read-reading-grimoire-gif-9258809254239823881 -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<ViewTransitions />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>🧙🏾‍♂️ Greetings Traveler.</h1>
+			<p>
+				You've come a long way, Take a seat 🏕️.
+			</p>
+			<p>
+				<img src="./src/assets/images/campfire2.webp" />
+			</p>
+			<p>If you see any giant blue porcupines, take note that
+				my favourite human gene is "SHH" google it 😉
+			</p>
+			<p>I know my taste in webdesign might throw you off but I swear im a Geneticist and not a computer nerd! (I daily drive linux on a ryzen 9 pc btw)</p>
+		</main>
+		<Footer />
+	</body>
+</html>
