@@ -147,7 +147,8 @@ hr {
         align-items: center; /* Center vertically */
         height: 100vh; /* Make the container take up the full viewport height */
         text-align: center; /* Center-align the text itself */
-    }
+		flex-direction: column;
+	}
 }
 
 .sr-only {
