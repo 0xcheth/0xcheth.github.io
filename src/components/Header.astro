@@ -21,6 +21,12 @@ import { SITE_TITLE } from '../consts';
 			  menu.classList.remove('hidden');
 			});
 		  });
+		  window.addEventListener('popstate', () => {
+  			const menu = document.getElementById('menu');
+  			if (menu) {
+    		menu.classList.remove('hidden'); // Hide the menu when navigating
+  			}
+		  });
 		});
 	  </script>
 	<nav>
