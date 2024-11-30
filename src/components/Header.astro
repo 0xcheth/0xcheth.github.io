@@ -11,14 +11,14 @@ import { SITE_TITLE } from '../consts';
 		  const menu = document.getElementById('menu');
 	  
 		  menuToggle.addEventListener('click', () => {
-			menu.classList.toggle('show');
+			menu.classList.toggle('hidden');
 		  });
 	  
 		  // Hide the menu when any link is clicked
 		  const links = document.querySelectorAll('a');
 		  links.forEach(link => {
 			link.addEventListener('click', () => {
-			  menu.classList.remove('show');
+			  menu.classList.remove('hidden');
 			});
 		  });
 		});
