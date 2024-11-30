@@ -175,9 +175,8 @@ hr {
 	}
 	.internal-links.hidden {
 		display: none;
-	  }
-	.hidden {
-		display: none;
+	}
+	
 }
 
 .sr-only {
