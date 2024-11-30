@@ -160,6 +160,14 @@ hr {
 	}
 	.hamburger {
 		display: block; /* Show the hamburger button on smaller screens */
+		background: none; /* Remove the default background */
+    	border: none; /* Remove the border around the button */
+    	font-size: 36px; /* Increase the size of the hamburger icon */
+    	color: white; /* Change the color to white (or any color you prefer) */
+    	cursor: pointer; /* Show a pointer cursor on hover */
+    	padding: 10px; /* Add padding around the button */
+    	margin: 0; /* Remove any default margin */
+    	outline: none; /* Remove the focus outline */
 	}
 	.internal-links {
 		display: none; /* Hide menu by default */
@@ -173,7 +181,7 @@ hr {
     	flex-direction: column;
     	gap: 1rem;
     	z-index: 10;
-		overflow-y: auto;
+		
 	}
 	.internal-links.hidden {
 		display: none;
