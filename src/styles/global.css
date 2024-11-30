@@ -163,7 +163,6 @@ hr {
 		background: none; /* Remove the default background */
     	border: none; /* Remove the border around the button */
     	font-size: 36px; /* Increase the size of the hamburger icon */
-    	color: white; /* Change the color to white (or any color you prefer) */
     	cursor: pointer; /* Show a pointer cursor on hover */
     	padding: 10px; /* Add padding around the button */
     	margin: 0; /* Remove any default margin */
@@ -174,7 +173,6 @@ hr {
     	position: fixed;
     	top: 0; /* Adjust to align under the header */
     	left: 0;
-    	background-color: #333;
     	width: 100vw; /* Full width of the viewport */
     	height: 100vh;
     	padding: 10px;
