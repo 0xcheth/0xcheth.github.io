@@ -7,14 +7,21 @@ import { SITE_TITLE } from '../consts';
 	<!-- button script listener -->
 	<script type="module" client:load>
 		document.addEventListener('DOMContentLoaded', () => {
-			const menuToggle = document.getElementById('menu-toggle');
-			const menu = document.getElementById('menu');
+		  const menuToggle = document.getElementById('menu-toggle');
+		  const menu = document.getElementById('menu');
 		  
-			menuToggle.addEventListener('click', () => {
-			  menu.classList.toggle('hidden');
-			});
+		  // Hide the menu by default when the page loads (for mobile view)
+		  menu.classList.add('hidden');
+		  
+		  // Listen for menu toggle
+		  menuToggle.addEventListener('click', () => {
+			menu.classList.toggle('hidden');
 		  });
-	</script>
+		  
+		  // Optionally, you can reset the menu to hidden on page load if needed
+		  // menu.classList.add('hidden');
+		});
+	  </script>
 	<nav>
 	  <h2><a href="/">{SITE_TITLE}</a></h2>
   
