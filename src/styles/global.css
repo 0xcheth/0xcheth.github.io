@@ -163,15 +163,17 @@ hr {
 	}
 	.internal-links {
 		display: none; /* Hide menu by default */
-    	position: absolute;
-    	top: 50px; /* Adjust to align under the header */
+    	position: fixed;
+    	top: 0; /* Adjust to align under the header */
     	left: 0;
     	background-color: #333;
-    	width: 100%;
+    	width: 100vw; /* Full width of the viewport */
+    	height: 100vh;
     	padding: 10px;
     	flex-direction: column;
     	gap: 1rem;
     	z-index: 10;
+		overflow-y: auto;
 	}
 	.internal-links.hidden {
 		display: none;
