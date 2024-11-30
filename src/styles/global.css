@@ -165,7 +165,7 @@ hr {
 		z-index: 11;
 	}
 	.internal-links {
-		display: none; /* Hide menu by default */
+		display: flex; /* Hide menu by default */
     	position: absolute;
     	top: 0; /* Adjust to align under the header */
     	left: 0;
