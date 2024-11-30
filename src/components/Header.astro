@@ -3,38 +3,25 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header client:load>
-	<!-- button script listener -->
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-		  const menuToggle = document.getElementById('menu-toggle');
-		  const menu = document.getElementById('menu');
-	  
-		  menuToggle.addEventListener('click', () => {
-			menu.classList.toggle('hidden');
-		  });
-		});
-	  </script>
+<header>
 	<nav>
 	  <h2><a href="/">{SITE_TITLE}</a></h2>
   
-	  <!-- Hamburger Button -->
-	  <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
-		☰
-	  </button>
-
-	  <!-- Normal navigation hidden in small displays -->
+	  <!-- Hamburger Button using checkbox hack -->
+	  <input type="checkbox" id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+	  <label for="menu-toggle">☰</label>
+  
+	  <!-- Normal navigation visible in large displays -->
 	  <div class="social-links">
 		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/aboutme">About me</HeaderLink>
-	   	<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/aboutme">About Me</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
 	  </div>
-	  
-		
+  
 	  <!-- Internal Links (hidden by default on smaller screens) -->
-	  <div id="menu" class="internal-links hidden">
+	  <div id="menu" class="internal-links">
 		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/aboutme">About me</HeaderLink>
+		<HeaderLink href="/aboutme">About Me</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 	  </div>
   
@@ -60,6 +47,73 @@ import { SITE_TITLE } from '../consts';
 		</a>
 	  </div>
 	</nav>
+	<style>
+		/* Basic Styling */
+		body {
+		  font-family: Arial, sans-serif;
+		  margin: 0;
+		  padding: 0;
+		}
+	
+		nav {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  background-color: #333;
+		  padding: 10px 20px;
+		}
+	
+		h2 a {
+		  color: white;
+		  text-decoration: none;
+		}
+	
+		/* Hide the menu by default */
+		#menu {
+		  display: none;
+		  flex-direction: column;
+		}
+	
+		#menu a {
+		  color: white;
+		  text-decoration: none;
+		  padding: 10px;
+		  border-top: 1px solid #fff;
+		}
+	
+		#menu a:hover {
+		  background-color: #444;
+		}
+	
+		/* Hide checkbox */
+		#menu-toggle {
+		  display: none;
+		}
+	
+		/* Label as hamburger icon */
+		label[for="menu-toggle"] {
+		  font-size: 30px;
+		  color: white;
+		  cursor: pointer;
+		}
+	
+		/* When checkbox is checked, show menu */
+		#menu-toggle:checked + #menu {
+		  display: flex;
+		}
+	
+		/* Responsive Design */
+		@media (min-width: 768px) {
+		  #menu {
+			display: flex;
+			flex-direction: row;
+		  }
+	
+		  label[for="menu-toggle"] {
+			display: none;
+		  }
+		}
+	  </style>
 </header>
 
 
