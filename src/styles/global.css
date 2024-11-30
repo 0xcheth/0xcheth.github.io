@@ -171,7 +171,7 @@ hr {
 	}
 	.internal-links {
 		display: none; /* Hide menu by default */
-    	position: fixed;
+    	position: absolute;
     	top: 0; /* Adjust to align under the header */
     	left: 0;
     	width: 100vw; /* Full width of the viewport */
