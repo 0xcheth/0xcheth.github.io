@@ -47,49 +47,53 @@ import { SITE_TITLE } from '../consts';
 		</a>
 	  </div>
 	</nav>
-
-
 	<style>
-		/* Hide the checkbox visually but keep it functional */
+	@media (min-width: 720px) {
+		.hamburger {
+			display: flex;
+		}
+		.internal-links {
+			display: flex;
+			position: relative;
+			flex-direction: row; 
+			height: auto; 
+			background-color: transparent; 
+		}
+		.internal-links a {
+			margin: 0 15px; 
+		}
 		.hamburger-checkbox {
 			display: none;
     	}
-		/* Hamburger Button */
 		.hamburger {
-		  display: block; /* Show the hamburger button on smaller screens */
-		  background: none; /* Remove the default background */
-		  border: none; /* Remove the border around the button */
-		  font-size: 36px; /* Increase the size of the hamburger icon */
-		  cursor: pointer; /* Show a pointer cursor on hover */
-		  padding: 10px; /* Add padding around the button */
-		  margin: 0; /* Remove any default margin */
-		  outline: none; /* Remove the focus outline */
-		  z-index: 11; /* Ensure it's above other content */
+		  display: block; 
+		  background: none; 
+		  border: none; 
+		  font-size: 36px; 
+		  cursor: pointer; 
+		  padding: 10px; 
+		  margin: 0; 
+		  outline: none; 
+		  z-index: 11; 
 		}
-	
-		/* Internal Links - Menu */
 		.internal-links {
-		  display: none; /* Initially hidden */
+		  display: none; 
 		  position: absolute;
-		  top: 0; /* Align under the header */
+		  top: 0; 
 		  left: 0;
-		  width: 100vw; /* Full width of the viewport */
-		  height: 100vh; /* Full viewport height */
+		  width: 100vw; 
+		  height: 100vh; 
 		  padding: 10px;
 		  flex-direction: column;
 		  justify-content: center;
 		  align-items: center;
 		  overflow-y: auto;
-		  z-index: 10; /* Position behind the button */
-		  background-color: rgba(255, 255, 255, 0.96); /* Semi-transparent background */
+		  z-index: 10; 
+		  background-color: rgba(255, 255, 255, 0.96); 
 		}
-	
-		/* Show the menu when the checkbox is checked */
 		.hamburger-checkbox:checked ~ .internal-links {
       		display: flex;
 		}
-	
-		/* Styling for links inside the menu */
 		.internal-links a {
 		  color: #333;
 		  text-decoration: none;
@@ -98,33 +102,12 @@ import { SITE_TITLE } from '../consts';
 		  background-color: #fff;
 		  border-radius: 5px;
 		}
-	
 		.internal-links a:hover {
 		  background-color: #ddd;
 		}
-	
-		/* Responsive Design */
-		@media (min-width: 720px) {
-		  .hamburger {
-			display: flex;
-		  }
-	
-		  .internal-links {
-			display: flex;
-			position: relative;
-			flex-direction: row; /* Horizontal layout on large screens */
-			height: auto; /* Normal height */
-			background-color: transparent; /* Remove background on large screens */
-		  }
-	
-		  .internal-links a {
-			margin: 0 15px; /* Horizontal spacing for large screens */
-		  }
-		}
+	}
 	</style>
 </header>
-
-
 <style>
 	header {
 		margin: 0;
