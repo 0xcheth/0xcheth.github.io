@@ -183,10 +183,6 @@ hr {
 		overflow-y: auto;
     	z-index: 10;
 	}
-	.internal-links.hidden {
-		display: none;
-	}
-	
 }
 
 .sr-only {
