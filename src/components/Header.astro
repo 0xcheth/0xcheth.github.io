@@ -49,11 +49,15 @@ import { SITE_TITLE } from '../consts';
 		</a>
 	  </div>
 	</nav>
-
 	<script>
-		document.querySelector('.menu').addEventListener('click', () => {
-		  document.querySelector('menu-toggle').classList.toggle('hidden');
-		});
+		document.addEventListener('DOMContentLoaded', () => {
+			const menuToggle = document.getElementById('menu-toggle');
+			const menu = document.getElementById('menu');
+		  
+			menuToggle.addEventListener('click', () => {
+			  menu.classList.toggle('hidden');
+			});
+		  });
 	</script>
 </header>
 
