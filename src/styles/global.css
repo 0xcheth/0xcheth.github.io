@@ -162,18 +162,22 @@ hr {
 		display: block; /* Show the hamburger button on smaller screens */
 	}
 	.internal-links {
-		flex-direction: column;
-		background-color: #333;
-		padding: 10px;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		width: 200px;
-		display: none;
+		display: none; /* Hide menu by default */
+    	position: absolute;
+    	top: 50px; /* Adjust to align under the header */
+    	left: 0;
+    	background-color: #333;
+    	width: 100%;
+    	padding: 10px;
+    	flex-direction: column;
+    	gap: 1rem;
+    	z-index: 10;
 	}
 	.internal-links.hidden {
 		display: none;
 	  }
+	.hidden {
+		display: none;
 }
 
 .sr-only {
@@ -192,4 +196,4 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
-}
+}}
