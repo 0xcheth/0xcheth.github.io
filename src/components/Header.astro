@@ -11,7 +11,15 @@ import { SITE_TITLE } from '../consts';
 	  <button id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
 		☰
 	  </button>
-  
+	  
+	  <!-- Normal navigation hidden in small displays -->
+	  <div class="social-links">
+		<HeaderLink href="/index">Home</HeaderLink>
+		<HeaderLink href="/aboutme">About me</HeaderLink>
+	   	<HeaderLink href="/blog">Blog</HeaderLink>
+	  </div>
+	  
+		
 	  <!-- Internal Links (hidden by default on smaller screens) -->
 	  <div id="menu" class="internal-links hidden">
 		<HeaderLink href="/index">Home</HeaderLink>
