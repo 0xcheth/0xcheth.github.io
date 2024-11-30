@@ -165,11 +165,11 @@ hr {
 		z-index: 11;
 	}
 	.internal-links {
-		display: flex; /* Hide menu by default */
+		display: flex; 
     	position: absolute;
     	top: 0; /* Adjust to align under the header */
     	left: 0;
-    	width: 100vw; /* Full width of the viewport */
+    	width: 25vw; /* Full width of the viewport */
     	height: 100vh;
     	padding: 10px;
     	flex-direction: column;
@@ -177,6 +177,7 @@ hr {
 		align-items: center;
 		overflow-y: auto;
     	z-index: 10;
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 }
 
