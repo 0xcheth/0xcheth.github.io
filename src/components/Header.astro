@@ -5,7 +5,33 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<!--import hamburgermenu script -->
-	<script src="/components/Hamburgermenu.astro"/>
+	<script type="module" client:load>
+		document.addEventListener('DOMContentLoaded', () => {
+		  const menuToggle = document.getElementById('menu-toggle');
+		  const menu = document.getElementById('menu');
+		  let menuVisible = false; // Track the state of the menu
+	  
+		  // Toggle menu visibility on button click
+		  menuToggle.addEventListener('click', () => {
+			if ('startViewTransition' in document) {
+			  // If the view transition API is available
+			  document.startViewTransition(() => {
+				menuVisible = !menuVisible;
+				menu.classList.toggle('hidden', !menuVisible);
+				
+				// Optionally handle transition events for additional logic
+				document.addEventListener('transitionend', () => {
+				  // Do something after the transition ends, if necessary
+				});
+			  });
+			} else {
+			  // Fallback for browsers that don't support ViewTransitions
+			  menuVisible = !menuVisible;
+			  menu.classList.toggle('hidden', !menuVisible);
+			}
+		  });
+		});
+	  </script>
 	<nav>
 	  <h2><a href="/">{SITE_TITLE}</a></h2>
   
