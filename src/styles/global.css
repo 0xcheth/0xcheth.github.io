@@ -167,6 +167,7 @@ hr {
     	padding: 10px; /* Add padding around the button */
     	margin: 0; /* Remove any default margin */
     	outline: none; /* Remove the focus outline */
+		z-index: 11;
 	}
 	.internal-links {
 		display: none; /* Hide menu by default */
@@ -177,9 +178,10 @@ hr {
     	height: 100vh;
     	padding: 10px;
     	flex-direction: column;
-    	gap: 1rem;
+		justify-content: center;
+		align-items: center;
+		overflow-y: auto;
     	z-index: 10;
-		
 	}
 	.internal-links.hidden {
 		display: none;
