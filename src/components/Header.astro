@@ -8,8 +8,8 @@ import { SITE_TITLE } from '../consts';
 	  <h2><a href="/">{SITE_TITLE}</a></h2>
 
 	  <!-- Hamburger Button using checkbox hack -->
-	  <input type="checkbox" id="menu-toggle" class="hamburger" aria-label="Toggle navigation">
-	  <label for="menu-toggle">☰</label>
+	  <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
+	  <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
   
 	  <!-- Normal navigation visible in large displays -->
 	  <div class="social-links">
@@ -50,6 +50,10 @@ import { SITE_TITLE } from '../consts';
 
 
 	<style>
+		/* Hide the checkbox visually but keep it functional */
+		.hamburger-checkbox {
+			display: none;
+    	}
 		/* Hamburger Button */
 		.hamburger {
 		  display: block; /* Show the hamburger button on smaller screens */
@@ -81,8 +85,8 @@ import { SITE_TITLE } from '../consts';
 		}
 	
 		/* Show the menu when the checkbox is checked */
-		#menu-toggle:checked + label + #menu {
-		  display: flex;
+		.hamburger-checkbox:checked ~ .internal-links {
+      		display: flex;
 		}
 	
 		/* Styling for links inside the menu */
@@ -100,9 +104,9 @@ import { SITE_TITLE } from '../consts';
 		}
 	
 		/* Responsive Design */
-		@media (min-width: 768px) {
+		@media (min-width: 720px) {
 		  .hamburger {
-			display: none; /* Hide the hamburger button on larger screens */
+			display: flex;
 		  }
 	
 		  .internal-links {
