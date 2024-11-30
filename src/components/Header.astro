@@ -4,16 +4,8 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
-	<script type="module" client:load>
-		document.addEventListener('DOMContentLoaded', () => {
-			const menuToggle = document.getElementById('menu-toggle');
-			const menu = document.getElementById('menu');
-		  
-			menuToggle.addEventListener('click', () => {
-			  menu.classList.toggle('hidden');
-			});
-		  });
-	</script>
+	<!--import hamburgermenu script -->
+	<script src="/components/Hamburgermenu.astro"/>
 	<nav>
 	  <h2><a href="/">{SITE_TITLE}</a></h2>
   
