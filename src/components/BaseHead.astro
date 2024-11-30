@@ -11,7 +11,7 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/placeholder.png' } = Astro.props;
+const { title, description, image = '/placeholder.webp' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -46,3 +46,9 @@ const { title, description, image = '/placeholder.png' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!--Robots tag -->
+‍<meta name="robots" content="index, follow">
+
+<!-- Viewpotrt meta tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
