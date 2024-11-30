@@ -4,6 +4,16 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header>
+	<script type="module" client:load>
+		document.addEventListener('DOMContentLoaded', () => {
+			const menuToggle = document.getElementById('menu-toggle');
+			const menu = document.getElementById('menu');
+		  
+			menuToggle.addEventListener('click', () => {
+			  menu.classList.toggle('hidden');
+			});
+		  });
+	</script>
 	<nav>
 	  <h2><a href="/">{SITE_TITLE}</a></h2>
   
@@ -49,16 +59,6 @@ import { SITE_TITLE } from '../consts';
 		</a>
 	  </div>
 	</nav>
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const menuToggle = document.getElementById('menu-toggle');
-			const menu = document.getElementById('menu');
-		  
-			menuToggle.addEventListener('click', () => {
-			  menu.classList.toggle('hidden');
-			});
-		  });
-	</script>
 </header>
 
 
