@@ -11,7 +11,7 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/default.png' } = Astro.props;
+const { title, description, image = '/campfire2.webp' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -31,6 +31,7 @@ const { title, description, image = '/default.png' } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
