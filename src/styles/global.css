@@ -19,12 +19,12 @@
 	display: none; /* Hide on larger screens */
   }
   
-  .internal-links {
+.internal-links {
 	display: flex;
 	gap: 1rem;
   }
   
-  .internal-links.hidden {
+.internal-links.hidden {
 	display: none;
   }  
 @font-face {
