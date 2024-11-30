@@ -153,32 +153,6 @@ hr {
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 	}
-	.hamburger {
-		display: block; /* Show the hamburger button on smaller screens */
-		background: none; /* Remove the default background */
-    	border: none; /* Remove the border around the button */
-    	font-size: 36px; /* Increase the size of the hamburger icon */
-    	cursor: pointer; /* Show a pointer cursor on hover */
-    	padding: 10px; /* Add padding around the button */
-    	margin: 0; /* Remove any default margin */
-    	outline: none; /* Remove the focus outline */
-		z-index: 11;
-	}
-	.internal-links {
-		display: flex; 
-    	position: absolute;
-    	top: 0; /* Adjust to align under the header */
-    	left: 0;
-    	width: 100vw; /* Full width of the viewport */
-    	height: 100vh;
-    	padding: 10px;
-    	flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		overflow-y: auto;
-    	z-index: 10;
-		background-color: rgba(255, 255, 255, 0.96);
-	}
 }
 
 .sr-only {
