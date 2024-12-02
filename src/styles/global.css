@@ -98,7 +98,8 @@ a:hover {
 	color: var(--accent);
 }
 .no-style-link {
-    text-decoration: none; 
+    text-decoration: none;
+	color: inherit; 
 }
 p {
 	margin-bottom: 1em;
