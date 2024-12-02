@@ -82,6 +82,15 @@ h4 {
 h5 {
 	font-size: 1.25em;
 }
+figcaption {
+
+	padding: 10px;
+  
+	margin-top: 5px;
+  
+	border: 1px solid #ddd;
+    
+}
 strong,
 b {
 	font-weight: 700;
@@ -152,6 +161,10 @@ hr {
         align-items: center; /* Center vertically */
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
+	}
+	figcaption {
+
+		font-size: 12px;
 	}
 }
 
