@@ -4,7 +4,7 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
+ :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
@@ -15,6 +15,92 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
+
+/* This section is for custom color styling*/
+
+
+/* Background color for the body */
+
+html {
+	background: auto;
+}
+
+/* Internal links colors */
+
+.internal-links {
+	background-color: rgba(0, 0, 0, 0.95);
+	color: auto;
+}
+
+.internal-links a {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.internal-links a:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Header color */
+
+header {
+	background: auto;
+}
+/* Header text color */
+
+
+/* Background color for headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.5rem 0;
+	color: auto;
+	line-height: 1.2;
+	overflow: visible; 
+	white-space: normal;
+}
+
+/* Background color for hyperlinks*/
+
+a {
+	color: var(--accent);
+}
+a:hover {
+	color: var(--accent);
+}
+.no-style-link {
+    
+	color: inherit; 
+}
+
+/* Background color for paragraphs */
+
+p {
+	margin-bottom: 1em;
+	color: auto;
+}
+
+/* Background color for paragraphs */
+
+figcaption {
+	margin-top: 0px;
+  font-size: 14px;
+  color: transparent; /* hidden by default */
+}
+
+/* Background color for blockquotes */
+
+code {
+	padding: 2px 5px;
+	background-color: rgb(var(--gray-light));
+	border-radius: 2px;
+}
+
+/* Background color section end */
+
 .container {
 	display: flex;
 	justify-content: center; /* Center horizontally */
@@ -55,18 +141,7 @@ main {
 	margin: auto;
 	padding: 3em 1em;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-	overflow: visible; 
-	white-space: normal;
-}
+
 h1 {
 	font-size: 3.052em;
 }
@@ -82,28 +157,12 @@ h4 {
 h5 {
 	font-size: 1.25em;
 }
-figcaption {
-  	margin-top: 0px;
-	font-size: 14px;
-	color: transparent;
-}
+
 strong,
 b {
 	font-weight: 700;
 }
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-.no-style-link {
-    /*text-decoration: none;*/
-	color: inherit; 
-}
-p {
-	margin-bottom: 1em;
-}
+
 .prose p {
 	margin-bottom: 2em;
 }
@@ -124,11 +183,7 @@ img {
 	pointer-events: none;
 
 }
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
+
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
@@ -187,3 +242,4 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
