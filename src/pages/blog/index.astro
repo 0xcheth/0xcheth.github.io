@@ -31,19 +31,19 @@ const posts = (await getCollection('blog')).sort(
 				padding: 0;
 			}
 			ul li {
-				width: calc(25% - 1rem);
+				width: calc(50% - 1rem);
 			}
 			ul li * {
 				text-decoration: none;
 				transition: 0.3s ease;
 			}
 			ul li:first-child {
-				width: 50%;
+				width: 100%;
 				margin-bottom: 1rem;
 				text-align: center;
 			}
 			ul li:first-child img {
-				width: 50%;
+				width: 75%;
 			}
 			ul li:first-child .title {
 				font-size: 1.39rem;
@@ -76,7 +76,7 @@ const posts = (await getCollection('blog')).sort(
 					gap: 0.5em;
 				}
 				ul li {
-					width: 100%;
+					width: 50%;
 					text-align: center;
 				}
 				ul li:first-child {

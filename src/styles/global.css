@@ -119,8 +119,9 @@ code {
 	box-shadow: 0px 2px 8px rgba(var(--black), 30%);
 	width: 90%;
 	max-width: calc(100% - 6em);
-	margin: 2em 0em;
+	margin: 1em 0em;
 	padding: 2em 2em;
+	margin-bottom: 0;
 }
 
 .colorbox {
@@ -128,10 +129,11 @@ code {
 	background-color: var(--HeaderBg);
 	border-radius: 1em;
 	box-shadow: var(--box-shadow);
-	width: 90%;
-	max-width: calc(100% - 6em);
-	margin: 2em 0em;
+	width: 100%;
+	max-width: calc(100% - 2em);
+	margin-top: 1em;
 	padding: 2em 2em;
+	
 
 }
 
@@ -149,6 +151,7 @@ code {
 	align-items: center; /* Center vertically */
 	text-align: center; /* Center-align the text itself */
 	flex-direction: row;
+	margin: 0;
 }
 
 .centerbox {
@@ -157,14 +160,17 @@ code {
 	align-items: center; /* Center vertically */
 	text-align: center; /* Center-align the text itself */
 	flex-direction: column;
-}  
+	margin: 0;
+}  	
 
 /* */
 /* */
 /* */ /* Flex Boxes END */
 /* */
 /* */
-
+span {
+	display: none;
+}
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -257,6 +263,9 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+.internal-links {
+	display: none;
+}
 @media (max-width: 100em) {
 		.rowbox {
 		display: flex;
@@ -265,19 +274,30 @@ hr {
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 		width: 100%;
-		margin: 2em 0em;
-		padding: 2em 2em;
+		
 }
 @media (max-width: 720px) {
 	h1 {
         font-size: 2.441em;
         margin: 0; 
 	}
+
+	h2 {
+		font-size: 1.953em;
+	}
+
+	h3 {
+		font-size: 1.563em;
+	}
+
+	h4 {
+		font-size: 1.25em;
+	}
 	body {
 		font-size: 18px;
 	}
 	main {
-		padding: 1em;
+		padding: 0em;
 	}
 	.centerbox {
         display: flex;
@@ -285,7 +305,8 @@ hr {
         align-items: center; /* Center vertically */
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
-}
+	
+}}
 	
 
 .sr-only {
@@ -305,7 +326,7 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
-}}
+}
 
 /* Appended Theme Variables */
 :root {
