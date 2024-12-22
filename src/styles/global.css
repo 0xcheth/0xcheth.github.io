@@ -116,7 +116,7 @@ code {
 .box {
 	background-color: transparent;
 	border-radius: 1em;
-	box-shadow: 0 2px 8px rgba(var(--black), 100%);
+	box-shadow: 0 2px 8px rgba(var(--black), 80%);
 	width: 90%;
 	max-width: calc(100% - 6em);
 	margin: 2em 0em;
