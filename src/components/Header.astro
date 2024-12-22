@@ -7,14 +7,11 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 
 <header>
 	<nav>
-	  <h2 style="font-size: x-large;"><a href="/">{SITE_TITLE}</a></h2>
+	  <h2 style="font-size: x-large; z-index: 11;"><a href="/">{SITE_TITLE}</a></h2>
 
 	  <!-- Hamburger Button using checkbox hack -->
 	  <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
 	  <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
-	  
-	 
-
 	  
 	  <div id="menu" class="internal-links">
 		
@@ -24,7 +21,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 
 			<div class="rowbox" style="margin-bottom: 4em;">
 				<a href="https://ko-fi.com/0xcheth/" target="_blank">
-					<img style="margin-left: 0;" src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a0171bfb928b21a7e00_support_me_on_kofi_beige-p-500.png" alt="Support me on Ko-fi" width="200" />
+					<img width="180" style="margin-left: 0;" src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a0171bfb928b21a7e00_support_me_on_kofi_beige-p-500.png" alt="Support me on Ko-fi"  />
 				  </a>
 			</div>
 
@@ -32,20 +29,20 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		
 				<a style="margin: 0.5em;" href={Yourinstagram} target="_blank">
 					<span class="sr-only">Find me on Instagram!</span>
-					<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="50"  />
+					<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="45"  />
 				</a>
 				  
 				
 				<a style="margin: 0.5em;" href={Yourlinkedin} target="_blank">
 					<span class="sr-only">Find me on Linkedin!</span>
-					<img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="Linkedin" width="50"  />
+					<img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="Linkedin" width="45"  />
 				</a>
 				
 		
 				</a>
 				<a style="margin: 0.5em;" href={Yourgithub} target="_blank">
 					<span class="sr-only">Go to Astro's GitHub repo</span>
-					<img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="GitHub" width="50"  />
+					<img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="GitHub" width="45"  />
 				</a>
 
 			</div>
@@ -161,11 +158,11 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			
 		}
 		header {
-    		padding: 25px; /* Taller header on smaller screens */
+    		padding: 25px; 
   		}
 
   		body {
-    		padding-top: 30px; /* Match the header height */
+    		padding-top: 30px; 
   		}
 		}
 
