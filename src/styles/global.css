@@ -257,7 +257,7 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 1080px) {
+@media (max-width: 720px) {
 	h1 {
         font-size: 2.441em;
         margin: 0; 
@@ -275,19 +275,25 @@ hr {
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 	}
+@media (max-width: 800px) {
 	.rowbox {
-		display: flex;
-        justify-content: center; /* Center horizontally */
+		justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 		width: 100%;
 		margin: 2em 0em;
 		padding: 2em 2em;
+
 	}
-
 	
+}
+	
+}
+figcaption {
 
+		font-size: 12px;
+	}
 .sr-only {
 	border: 0;
 	padding: 0;
@@ -320,5 +326,4 @@ hr {
   --HyperlinkCl: blue;
   --HyperlinkClHover: darkorange;
   --CodeBlockBg: #2C2F33;
-}
 }
