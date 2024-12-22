@@ -159,6 +159,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"Template-page.mdx": {
+	id: "Template-page.mdx";
+  slug: "template-page";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "about-this-site.mdx": {
 	id: "about-this-site.mdx";
   slug: "about-this-site";
