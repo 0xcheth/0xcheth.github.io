@@ -1,4 +1,4 @@
-//
+// run this script with "node scripts/AppendTheme.js"
 //
 //
 // Social and minor website details
@@ -8,17 +8,17 @@
 
 // Add your website or pages link eg. 'https://username.github.io'
 export const Yourweblink = {
-    SiteURL:'https://notnehah.github.io',
+    SiteURL:'https://0xcheth.com/',
 };
 
 // Path type. Dont change this if you dont know what it is.
 export const Yourpathtype = "/"  //'/' For root-level deployment, '/subpath/' for deployment in a subpath
 
 // Add your website name eg. "0xcheth"
-export const Yourwebname = "0xcheth.astro"
+export const Yourwebname = "0xcheth"
 
 // Add your full name/brand for copyright statement eg. John Doe
-export const Yourname = "0xcheth";
+export const Yourname = "Chethaka Ladduwahetty";
 
 // Add your linkedin link eg. "https://www.linkedin.com/in/user123"
 export const Yourlinkedin = "https://www.linkedin.com/in/0xcheth/"; 
@@ -45,15 +45,15 @@ export const Themecolors = {
 
     MainBg: "#FFFFFF", // Background color for the main body
 
-    HeaderText: "auto", // Text color for the headers
+    HeaderText: "black", // Text color for the headers
 
     MobileNav: "#2C2F33", // Background color for the mobile navigation menu
 
     MobileNavBtn: "transparent", // Text color for the mobile navigation buttons
 
-    NavBtnHover: "#orange", // Text color for the mobile navigation buttons
+    NavBtnHover: "orange", // Text color for the mobile navigation buttons
 
-    HeadingstxtCl: "#FFFFFF", // Text color for the headings
+    HeadingstxtCl: "black", // Text color for the headings
 
     BodytextCl: "#99AAB5", // Text color for the body text
 
