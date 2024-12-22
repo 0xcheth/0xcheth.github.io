@@ -25,10 +25,13 @@ html {
 .internal-links {
 	background-color: var(--MobileNav);
 	color: var(--HeaderText);
+	font-size: larger;
+	
 }
 
 .internal-links a {
 	background-color: var(--MobileNavBtn);
+	
 }
 
 .internal-links a:hover {
@@ -266,6 +269,8 @@ hr {
 .internal-links {
 	display: none;
 }
+
+
 @media (max-width: 100em) {
 		.rowbox {
 		display: flex;

@@ -1,27 +1,51 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
-import { Yourlinkedin } from '../../config.js';
+import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 
 ---
 
 <header>
 	<nav>
-	  <h2><a href="/">{SITE_TITLE}</a></h2>
+	  <h2 style="font-size: x-large;"><a href="/">{SITE_TITLE}</a></h2>
 
 	  <!-- Hamburger Button using checkbox hack -->
 	  <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
 	  <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
   
-	  <!-- Normal navigation visible in large displays -->
 	  
-	  <!-- Internal Links (hidden by default on smaller screens) -->
 	  <div id="menu" class="internal-links">
-		
-		<HeaderLink href="/">Home</HeaderLink>
+			
+	  	<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/aboutme">About me</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 
+			<div class="rowbox">
+
+				<a href="https://ko-fi.com/0xcheth/" target="_blank">
+					<img style="margin-top: 0.1em;" src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a01229bf8a18f97a3c1_favion-p-500.png" alt="Support me on Ko-fi" width="81" />
+				  </a>
+				  
+		
+				<a style="margin: 1em;" href={Yourinstagram} target="_blank">
+					<span class="sr-only">Find me on Instagram!</span>
+					<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="60"  />
+				</a>
+				  
+				
+				<a style="margin: 1em;" href={Yourlinkedin} target="_blank">
+					<span class="sr-only">Find me on Linkedin!</span>
+					<img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="Linkedin" width="60"  />
+				</a>
+				
+		
+				</a>
+				<a style="margin: 1em;" href={Yourgithub} target="_blank">
+					<span class="sr-only">Go to Astro's GitHub repo</span>
+					<img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="GitHub" width="60"  />
+				</a>
+
+			</div>
 		
 	  </div>
   
@@ -29,18 +53,18 @@ import { Yourlinkedin } from '../../config.js';
 	  <div class="social-links">
 
 		<a href={Yourlinkedin} target="_blank">
-		  <span class="sr-only"></span>
-		  <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
-			<path style="color: #0072b1"
-			  fill="currentColor"
-			  d="M0 1.146C0 .513.324 0 .722 0h14.556c.398 0 .722.513.722 1.146v13.708c0 .633-.324 1.146-.722 1.146H.722A.723.723 0 0 1 0 14.854V1.146zm4.943 12.248V5.937H2.542v7.457h2.401zm-1.2-8.493c.837 0 1.358-.554 1.358-1.248-.015-.711-.52-1.247-1.342-1.247-.822 0-1.357.536-1.357 1.247 0 .694.52 1.248 1.327 1.248h.014zM13.356 12.36V9.359c0-1.61-.305-2.707-2.145-2.707-1.004 0-1.675.55-1.954 1.076h-.028V5.937H6.828c.029.654 0 7.457 0 7.457h2.401v-4.16c0-.222.016-.444.082-.603.181-.444.594-.905 1.288-.905.909 0 1.273.683 1.273 1.683v3.985h2.401z"
-			></path>
-		  </svg>
+			<span class="sr-only">Find me on Linkedin!</span>
+			<img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="Linkedin" width="45" />
+		</a>
 		</a>
 		
+
 	  </div>
 	</nav>
 	<style>
+		.rowbox {
+			display: none;
+		}
 		.hamburger-checkbox {
 			display: none;
     	}
@@ -56,8 +80,8 @@ import { Yourlinkedin } from '../../config.js';
 		  z-index: 11; 
 		}
 		.internal-links {
-		  display: none; 
-		  position: absolute;
+		  position: fixed;
+		  display: flex; 
 		  top: 0; 
 		  right: 0;
 		  width: 100%; 
@@ -66,36 +90,58 @@ import { Yourlinkedin } from '../../config.js';
 		  flex-direction: column;
 		  justify-content: center;
 		  align-items: center;
-		  overflow-y: auto;
+		  opacity: 10;
 		  z-index: 10; 
 		  
 		}
 		.hamburger-checkbox:checked ~ .internal-links {
-      		display: flex;
+			opacity: 1;
+			transform: translateY(0);
 		}
 		.internal-links a {
 		  text-decoration: none;
-		  padding: 5px;
+		  padding: 0.4em; 
+		  padding-top: 0.2em;
+		  padding-bottom: 0.2em;
 		  margin: 1em 0;
 		  border: none;
 		  border-radius: 5px;
+		  transition: color 0.3s ease;
 		}
+		@media (max-width: 1081px) {
 		
-		@media (min-width: 720px) {
+		.internal-links {
+			transform: translateY(-100%);
+		  	transition: opacity 0.5s ease, transform 0.5s ease; 
+			font-size: x-large;
+		  }
+		.rowbox {
+			display: flex;
+			position: absolute; /* Position relative to the parent container */
+  			bottom: 0; /* Align to the bottom */
+  			left: 0; /* Align to the left */
+  			right: 0; /* Stretch the rowbox to the right side */
+			flex-direction: row;
+			margin-bottom: 6em;
+		}
+		}
+
+	@media (min-width: 1081px) {
 		  .hamburger {
 			display: flex;
 		  }
 		  .internal-links {
 			display: flex;
 			position: relative;
-			flex-direction: row; 
+			flex-direction: row;
 			height: auto; 
 			background-color: transparent; 
 		  }
 		  .internal-links a {
-			margin: 0 15px; 
+			margin: 0 15px;
+			
 		  }
-		@media (min-width: 720.1px) {
+		@media (min-width: 1081px) {
     	  .hamburger {
       		display: none; 
     	  }
@@ -103,7 +149,7 @@ import { Yourlinkedin } from '../../config.js';
     	  .internal-links {
       		display: flex; 
          
-		}
+			}
 	</style>
 </header>
 <style>
@@ -144,10 +190,11 @@ import { Yourlinkedin } from '../../config.js';
 	.social-links a {
 		display: flex;
 	}
-	@media (max-width: 720px) {
+	@media (max-width: 1081px) {
 		.social-links {
 			display: none;
 		}
 	}
-
+	
+		  
 </style>
