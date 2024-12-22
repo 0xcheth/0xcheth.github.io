@@ -278,23 +278,23 @@ hr {
 }
 @media (max-width: 1081px) {
 	h1 {
-        font-size: 2.441em;
+        font-size: 1.953em;
         margin: 0; 
 	}
 
 	h2 {
-		font-size: 1.953em;
-	}
-
-	h3 {
 		font-size: 1.563em;
 	}
 
-	h4 {
+	h3 {
 		font-size: 1.25em;
 	}
+
+	h4 {
+		font-size: 1.125em;
+	}
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
 		padding: 0em;
