@@ -55,13 +55,13 @@ export const Themecolors = {
 
     HeadingstxtCl: "black", // Text color for the headings
 
-    BodytextCl: "#99AAB5", // Text color for the body text
+    BodytextCl: "black", // Text color for the body text
 
-    ListCl: "lightgrey", // Text color for the list
+    ListCl: "black", // Text color for the list
 
-    HyperlinkCl: "#7289DA", // Text color for the hyperlinks
+    HyperlinkCl: "blue", // Text color for the hyperlinks
 
-    HyperlinkClHover: "#5865F2", // Text color for the hyperlinks on hover
+    HyperlinkClHover: "darkorange", // Text color for the hyperlinks on hover
 
     CodeBlockBg: "#2C2F33", // Background color for the code blocks
 

@@ -299,7 +299,6 @@ hr {
 	white-space: nowrap;
 }
 
-
 /* Appended Theme Variables */
 :root {
   --HeaderBg: #FFFFFF;
@@ -309,9 +308,9 @@ hr {
   --MobileNavBtn: transparent;
   --NavBtnHover: orange;
   --HeadingstxtCl: black;
-  --BodytextCl: #99AAB5;
-  --ListCl: lightgrey;
-  --HyperlinkCl: #7289DA;
-  --HyperlinkClHover: #5865F2;
+  --BodytextCl: black;
+  --ListCl: black;
+  --HyperlinkCl: blue;
+  --HyperlinkClHover: darkorange;
   --CodeBlockBg: #2C2F33;
 }

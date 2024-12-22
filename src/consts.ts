@@ -3,4 +3,4 @@
 import { Yourwebname } from '../config.js';
 
 export const SITE_TITLE = Yourwebname;
-export const SITE_DESCRIPTION = 'Cheths epic astrosite template';
+export const SITE_DESCRIPTION = 'Personal website for Chethaka Ladduwahetty coded in astro.js';
