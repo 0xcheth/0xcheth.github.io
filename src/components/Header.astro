@@ -15,32 +15,33 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
   
 	  
 	  <div id="menu" class="internal-links">
-			
+		
 	  	<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/aboutme">About me</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 
-			<div class="rowbox">
-
+			<div class="rowbox" style="margin-bottom: 10em;">
 				<a href="https://ko-fi.com/0xcheth/" target="_blank">
-					<img style="margin-top: 0.1em;" src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a01229bf8a18f97a3c1_favion-p-500.png" alt="Support me on Ko-fi" width="81" />
+					<img style="margin-left: 0;" src="https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a02fad2b4c413af6d15_support_me_on_kofi_badge_beige-p-500.png" alt="Support me on Ko-fi" width="200" />
 				  </a>
-				  
+			</div>
+
+			<div class="rowbox">  
 		
-				<a style="margin: 1em;" href={Yourinstagram} target="_blank">
+				<a style="margin: 0.5em;" href={Yourinstagram} target="_blank">
 					<span class="sr-only">Find me on Instagram!</span>
 					<img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="60"  />
 				</a>
 				  
 				
-				<a style="margin: 1em;" href={Yourlinkedin} target="_blank">
+				<a style="margin: 0.5em;" href={Yourlinkedin} target="_blank">
 					<span class="sr-only">Find me on Linkedin!</span>
 					<img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="Linkedin" width="60"  />
 				</a>
 				
 		
 				</a>
-				<a style="margin: 1em;" href={Yourgithub} target="_blank">
+				<a style="margin: 0.5em;" href={Yourgithub} target="_blank">
 					<span class="sr-only">Go to Astro's GitHub repo</span>
 					<img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="GitHub" width="60"  />
 				</a>
@@ -114,6 +115,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			transform: translateY(-100%);
 		  	transition: opacity 0.5s ease, transform 0.5s ease; 
 			font-size: x-large;
+			
 		  }
 		.rowbox {
 			display: flex;
@@ -122,7 +124,8 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
   			left: 0; /* Align to the left */
   			right: 0; /* Stretch the rowbox to the right side */
 			flex-direction: row;
-			margin-bottom: 6em;
+			margin-bottom: 5em;
+			
 		}
 		}
 
