@@ -258,9 +258,7 @@ hr {
 	border-top: 1px solid rgb(var(--gray-light));
 }
 @media (max-width: 100em) {
-
-	}
-	.rowbox {
+		.rowbox {
 		display: flex;
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
@@ -269,7 +267,7 @@ hr {
 		width: 100%;
 		margin: 2em 0em;
 		padding: 2em 2em;
-	}
+}
 @media (max-width: 720px) {
 	h1 {
         font-size: 2.441em;
@@ -307,7 +305,7 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
-}
+}}
 
 /* Appended Theme Variables */
 :root {
