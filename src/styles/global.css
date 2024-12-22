@@ -75,9 +75,10 @@ a {
 a:hover {
 	color: var(--HyperlinkClHover);
 }
-.no-style-link {
-    
-	color: inherit; 
+
+a:focus,
+a:hover {
+  text-decoration: none;  /* Removes underline on hover or focus */
 }
 
 /* Background color for paragraphs */
