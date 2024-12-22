@@ -298,6 +298,7 @@ hr {
 	}
 	main {
 		padding: 0em;
+		margin-top: 2em;
 	}
 	.centerbox {
         display: flex;
