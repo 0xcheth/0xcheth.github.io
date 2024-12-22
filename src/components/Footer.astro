@@ -35,11 +35,14 @@ import { Yourname, Yourinstagram, Yourlinkedin, Yourgithub } from '../../config.
 <style>
 	footer {
 		display:block;
+		position: relative;
 		margin: 0em;
 		padding: 0em 0em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--gray));
 		text-align: center;
+		bottom: 0;
+		z-index: 1;
 		
 	}
 	.social-links {
@@ -47,10 +50,12 @@ import { Yourname, Yourinstagram, Yourlinkedin, Yourgithub } from '../../config.
 		justify-content: center;
 		gap: 1em;
 		margin-top: 1em;
+		z-index: 1;
 	}
 	.social-links a {
 		text-decoration: none;
 		color: rgb(var(--gray));
+		
 	}
 	.social-links a:hover {
 		color: rgb(var(--gray-dark));

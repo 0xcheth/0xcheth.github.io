@@ -18,6 +18,9 @@
 
 html {
 	background: var(--MainBg);
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 /* Internal links colors */
@@ -125,6 +128,7 @@ code {
 	margin: 1em 0em;
 	padding: 2em 2em;
 	margin-bottom: 0;
+	
 }
 
 .colorbox {
@@ -164,8 +168,13 @@ code {
 	text-align: center; /* Center-align the text itself */
 	flex-direction: column;
 	margin: 0;
+	
 }  	
 
+.container {
+	min-height: 100vh;
+
+}
 /* */
 /* */
 /* */ /* Flex Boxes END */
@@ -191,7 +200,7 @@ span {
 body {
 	font-family: 'Atkinson', sans-serif;
 	margin: 0;
-	padding: 0;
+	height: 100%;
 	text-align: center;
 	background-size: 100% 600px;
 	word-wrap: break-word;
@@ -199,12 +208,15 @@ body {
 	color: rgb(darkgrey);
 	font-size: 20px;
 	line-height: 1.7;
+
+
 }
 main {
 	width: 90%;
 	max-width: calc(100% - 2em);
 	margin: 2em auto;
 	padding: 2em auto;
+	flex: 1;
 }
 
 h1 {
