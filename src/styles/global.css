@@ -116,7 +116,7 @@ code {
 .box {
 	background-color: transparent;
 	border-radius: 1em;
-	box-shadow: 0 2px 8px rgba(var(--black), 80%);
+	box-shadow: 0px 2px 8px rgba(var(--black), 30%);
 	width: 90%;
 	max-width: calc(100% - 6em);
 	margin: 2em 0em;
@@ -257,7 +257,7 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+@media (max-width: 1080px) {
 	h1 {
         font-size: 2.441em;
         margin: 0; 
@@ -275,11 +275,18 @@ hr {
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 	}
-	figcaption {
-
-		font-size: 12px;
+	.rowbox {
+		display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        text-align: center; /* Center-align the text itself */
+		flex-direction: column;
+		width: 100%;
+		margin: 2em 0em;
+		padding: 2em 2em;
 	}
-}
+
+	
 
 .sr-only {
 	border: 0;
@@ -313,4 +320,5 @@ hr {
   --HyperlinkCl: blue;
   --HyperlinkClHover: darkorange;
   --CodeBlockBg: #2C2F33;
+}
 }
