@@ -112,6 +112,13 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			transform: translateY(0);
 			
 		}
+
+		.hamburger-checkbox:checked ~ .social-links {
+  			opacity: 1;
+  			/*gonna put something in here later*/
+		}
+
+
 		.internal-links a {
 		  text-decoration: none;
 		  padding: 0.4em; 
@@ -120,9 +127,12 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		  margin: 1em 0;
 		  border: none;
 		  border-radius: 5px;
-		  transition: color 0.3s ease;
+		  transition: color 0.3s ease, transform 0.2s ease;
 		
-		
+		}
+
+		.internal-links a:hover {
+  		  transform: scale(1.05);
 		}
 
 		body {
@@ -133,10 +143,12 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		
 		.internal-links {
 			transform: translateY(-100%);
-		  	transition: opacity 0.5s ease, transform 0.5s ease; 
+			transition: transform 0.3s ease-in-out;
+			will-change: transform;
 			font-size: x-large;
 			
-		  }
+		}
+		
 		.rowbox {
 			display: flex;
 			position: absolute; /* Position relative to the parent container */
@@ -145,6 +157,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
   			right: 0; /* Stretch the rowbox to the right side */
 			flex-direction: row;
 			margin-bottom: 1em;
+			
 			
 		}
 		header {
