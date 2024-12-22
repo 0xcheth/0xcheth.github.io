@@ -51,7 +51,7 @@ export const Themecolors = {
 
     MobileNavBtn: "transparent", // Text color for the mobile navigation buttons
 
-    NavBtnHover: "orange", // Text color for the mobile navigation buttons
+    NavBtnHover: "#ff5a16", // Text color for the mobile navigation buttons
 
     HeadingstxtCl: "black", // Text color for the headings
 

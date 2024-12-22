@@ -336,11 +336,11 @@ hr {
   --HeaderText: black;
   --MobileNav: #FFFFFF;
   --MobileNavBtn: transparent;
-  --NavBtnHover: orange;
+  --NavBtnHover: #ff5a16;
   --HeadingstxtCl: black;
   --BodytextCl: black;
   --ListCl: black;
   --HyperlinkCl: blue;
-  --HyperlinkClHover: darkorange;
+  --HyperlinkClHover: #ff5a16;
   --CodeBlockBg: #2C2F33;
 }
