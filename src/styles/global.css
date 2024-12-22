@@ -200,8 +200,8 @@ body {
 main {
 	width: 90%;
 	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 2em 1em;
+	margin: 2em auto;
+	padding: 2em auto;
 }
 
 h1 {

@@ -15,12 +15,13 @@ const posts = (await getCollection('blog')).sort(
 <!doctype html>
 <html lang="en">
 	<head>
-
+		
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<ViewTransitions />
 		<style>
 			main {
 				width: 960px;
+				
 			}
 			ul {
 				display: flex;
@@ -87,9 +88,11 @@ const posts = (await getCollection('blog')).sort(
 				}
 			}
 		</style>
+		
 	</head>
 	<body>
 		<Header />
+		
 		<main>
 			<section>
 				<ul>
@@ -109,6 +112,7 @@ const posts = (await getCollection('blog')).sort(
 				</ul>
 			</section>
 		</main>
+	
 		<Footer />
 	</body>
 </html>
