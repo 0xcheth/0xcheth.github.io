@@ -257,7 +257,7 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+@media (max-width: 100em) {
 	h1 {
         font-size: 2.441em;
         margin: 0; 
@@ -275,25 +275,19 @@ hr {
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 	}
-@media (max-width: 800px) {
 	.rowbox {
-		justify-content: center; /* Center horizontally */
+		display: flex;
+        justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 		width: 100%;
 		margin: 2em 0em;
 		padding: 2em 2em;
-
 	}
-	
-}
-	
-}
-figcaption {
 
-		font-size: 12px;
-	}
+	
+
 .sr-only {
 	border: 0;
 	padding: 0;
@@ -310,6 +304,7 @@ figcaption {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
 }
 
 /* Appended Theme Variables */
