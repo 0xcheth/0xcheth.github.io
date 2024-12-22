@@ -304,7 +304,7 @@ hr {
         display: flex;
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
-        text-align: center; /* Center-align the text itself */
+        text-align: left; /* Center-align the text itself */
 		flex-direction: column;
 	
 }}
