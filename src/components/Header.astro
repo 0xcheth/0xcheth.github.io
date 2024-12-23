@@ -5,11 +5,11 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 
 ---
 
-<header>
-	<nav>
-		<div>
-		<img src="/assets/logo.png" width="28" style="padding-top:0.4em; padding-right:0.25em;">
-	<h2 style="font-size: x-large; z-index: 11; left:0;"><a href="/">{SITE_TITLE}</a></h2>
+<header >
+	<nav >
+		<div >
+		<img src="/assets/logo.png" width="32" style="padding-top:0.4em; padding-right:0.25em; margin:0;">
+	<h2 style=" z-index: 11; left:0; "><a href="/">{SITE_TITLE}</a></h2>
 </div>
 	  <!-- Hamburger Button using checkbox hack -->
 	  <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
@@ -93,10 +93,11 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			right:0;
 			margin: 0em;
 			display: block;
-			padding: 1em 1em;
+			padding: 0.35em 1em;
 			box-shadow: 0 2px 8px rgba(var(--black), 30%);
 			border-radius: 0em;
 			z-index: 8;
+			
 		}
 		.overlay {
   			display: none;  /* Hidden by default */
@@ -114,9 +115,9 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		  right:0; 
 		  background: none; 
 		  border: none; 
-		  font-size: 36px; 
+		  font-size: 38px; 
 		  cursor: pointer; 
-		  padding: 1em; 
+		  padding: 0.75em; 
 		  margin-top: 0.25em; 
 		  outline: none; 
 		  z-index: 13; 
@@ -153,10 +154,6 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		.internal-links a:hover {
   		  transform: scale(1.05);
 		}
-
-		body {
-    		padding-top: 1em; 
-  		}
 
 		h2 {
 			margin: 0;
@@ -195,7 +192,6 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			transform: translateY(-100%);
 			transition: transform 0.3s ease-in-out;
 			will-change: transform;
-			font-size: x-large;
 			
 		}
 
@@ -214,12 +210,8 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			display: none;
 		}
 
-		header {
-    		padding: 25px; 
-  		}
-
   		body {
-    		padding-top: 65px; 
+    		padding-top: 1.35em; 
   		}
 	}
 
