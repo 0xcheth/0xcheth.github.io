@@ -7,11 +7,13 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 
 <header>
 	<nav>
-	  <h2 style="font-size: x-large; z-index: 11;"><a href="/">{SITE_TITLE}</a></h2>
-
+		<div>
+		<img src="/assets/logo.png" width="28" style="padding-top:0.4em; padding-right:0.25em;">
+	<h2 style="font-size: x-large; z-index: 11; left:0;"><a href="/">{SITE_TITLE}</a></h2>
+</div>
 	  <!-- Hamburger Button using checkbox hack -->
 	  <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
-	  <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
+	  <label style="color:white" for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
 	  
 	  <div id="menu" class="internal-links">
 		
@@ -42,13 +44,17 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 				</a>
 				<a style="margin: 0.5em;" href={Yourgithub} target="_blank">
 					<span class="sr-only">Go to Astro's GitHub repo</span>
-					<img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="GitHub" width="45"  />
+					<img src="https://cdn-icons-png.flaticon.com/512/10090/10090320.png" alt="GitHub" width="45"  />
 				</a>
 
 			</div>
 		
 	  </div>
-  
+
+
+	  <div id="overlay" class="overlay"></div>
+
+
 	  <!-- Social Links -->
 	  <div class="social-links">
 
@@ -62,20 +68,43 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 	  </div>
 	</nav>
 	<style>
+		
+		.hamburger-checkbox:checked ~ .internal-links {
+ 			display: flex;
+			opacity: 1;
+			transform: translateY(0);
+		}
+
 		.rowbox {
 			display: none;
 		}
 		.hamburger-checkbox {
 			display: none;
+			
     	}
 		header {
-		position:fixed;
-		top:0;
-		left:0;
-		right:0;
-		margin: 0em;
-		z-index: 8;
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			margin: 0em;
+			display: block;
+			padding: 1em 1em;
+			box-shadow: 0 2px 8px rgba(var(--black), 30%);
+			border-radius: 0em;
+			z-index: 8;
 		}
+		.overlay {
+  			display: none;  /* Hidden by default */
+  			position: fixed;
+  			top: 0;
+  			left: 0;
+  			width: 100%;
+  			height: 100%;
+  			background: rgba(0, 0, 0, 0.9);  /* Semi-transparent black background */
+  			z-index: 18;
+		}
+
 		.hamburger {
 		  position:fixed;
 		  right:0; 
@@ -86,7 +115,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		  padding: 0.5em; 
 		  margin-top: 0.25em; 
 		  outline: none; 
-		  z-index: 12; 
+		  z-index: 13; 
 		}
 		.internal-links {
 		  position: fixed;
@@ -104,18 +133,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		  z-index: 10; 
 		  
 		}
-		.hamburger-checkbox:checked ~ .internal-links {
-			opacity: 1;
-			transform: translateY(0);
-			
-		}
-
-		.hamburger-checkbox:checked ~ .social-links {
-  			opacity: 1;
-  			/*gonna put something in here later*/
-		}
-
-
+		
 		.internal-links a {
 		  text-decoration: none;
 		  padding: 0.4em; 
@@ -133,10 +151,41 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		}
 
 		body {
-    		padding-top: 25px; 
+    		padding-top: 1em; 
   		}
 
-		@media (max-width: 1081px) {
+		h2 {
+			margin: 0;
+			font-size: 1em;
+		}
+
+		h2 a,
+		h2 a.active {
+			text-decoration: none;
+		}
+
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		nav a {
+			padding: 1em 0em;
+			margin: 0em;
+			color: var(--HeaderText);
+			border-bottom: 4px solid transparent;
+			text-decoration: none;
+		}
+		nav a.active {
+			text-decoration: none;
+			border-bottom-color: var(--accent);
+		}
+
+		span {
+			display: none;
+		}		
+ 
+	@media (max-width: 1081px) {
 		
 		.internal-links {
 			transform: translateY(-100%);
@@ -145,7 +194,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			font-size: x-large;
 			
 		}
-		
+
 		.rowbox {
 			display: flex;
 			position: absolute; 
@@ -155,86 +204,42 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 			flex-direction: row;
 			margin-bottom: 1em;
 			
-			
 		}
+
+		.social-links {
+			display: none;
+		}
+
 		header {
     		padding: 25px; 
   		}
 
   		body {
-    		padding-top: 30px; 
+    		padding-top: 65px; 
   		}
-		}
+	}
 
 	@media (min-width: 1081px) {
-		  .hamburger {
-			display: flex;
-		  }
-		  .internal-links {
+		.hamburger {
+      		display: none; 
+    	}
+
+    	  .internal-links {
+      		display: flex; 
+         
+		}
+		  
+		.internal-links {
 			display: flex;
 			position: relative;
 			flex-direction: row;
 			height: auto; 
 			background-color: transparent; 
-		  }
-		  .internal-links a {
+		}
+		.internal-links a {
 			margin: 0 15px;
 			
-		  }
-		@media (min-width: 1081px) {
-    	  .hamburger {
-      		display: none; 
-    	  }
-
-    	  .internal-links {
-      		display: flex; 
-         
-			}
+		}
+		
 	</style>
 </header>
-<style>
-	header {
-		display: block;
-		margin: 0em;
-		padding: 0em 1em;
-		box-shadow: 0 2px 8px rgba(var(--black), 30%);
-		border-radius: 0.25em;
-
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0em;
-		margin: 0em;
-		color: var(--HeaderText);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 1081px) {
-		.social-links {
-			display: none;
-		}
-	}
-	
-		  
-</style>
