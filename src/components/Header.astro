@@ -13,7 +13,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 </div>
 	  <!-- Hamburger Button using checkbox hack -->
 	  <input type="checkbox" id="menu-toggle" class="hamburger-checkbox">
-	  <label style="color:white" for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
+	  <label style="color:white;" for="menu-toggle" class="hamburger" aria-label="Toggle navigation">☰</label>
 	  
 	  <div id="menu" class="internal-links">
 		
@@ -73,6 +73,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
  			display: flex;
 			opacity: 1;
 			transform: translateY(0);
+			
 		}
 
 		.rowbox {
@@ -80,6 +81,9 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		}
 		.hamburger-checkbox {
 			display: none;
+			
+
+			
 			
     	}
 		header {
@@ -102,7 +106,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
   			width: 100%;
   			height: 100%;
   			background: rgba(0, 0, 0, 0.9);  /* Semi-transparent black background */
-  			z-index: 18;
+  			z-index: 10;
 		}
 
 		.hamburger {
@@ -112,7 +116,7 @@ import { Yourlinkedin, Yourinstagram, Yourgithub } from '../../config.js';
 		  border: none; 
 		  font-size: 36px; 
 		  cursor: pointer; 
-		  padding: 0.5em; 
+		  padding: 1em; 
 		  margin-top: 0.25em; 
 		  outline: none; 
 		  z-index: 13; 

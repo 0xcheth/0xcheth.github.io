@@ -154,6 +154,7 @@ code {
 	flex-direction: column;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	
 }
 
 .rowbox {
@@ -164,7 +165,7 @@ code {
 	flex-direction: row;
 	margin-top: 0em;
 	margin-bottom: 0em;
-
+	
 }
 
 .centerbox {
@@ -175,7 +176,8 @@ code {
 	flex-direction: column;
 	margin-top: 0em;
 	margin-bottom: 0em;
-	
+	margin-left: 0.25em;
+	margin-right: 0.25em;
 }  	
 
 .container {
@@ -302,6 +304,7 @@ hr {
         text-align: center; /* Center-align the text itself */
 		flex-direction: column;
 		width: 100%;
+		
 		
 
 }
