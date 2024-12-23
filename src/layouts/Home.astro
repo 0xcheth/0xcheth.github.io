@@ -32,6 +32,7 @@ const featuredPosts = allPosts.slice(0, 3);  // Adjust number as needed
 		
 			<main>	
 				<div class='centerbox'>
+					
 					<slot />
 
 				<div class="rowbox" style="gap:1em; flex-direction: row; z-index: 3; ">
@@ -63,7 +64,7 @@ const featuredPosts = allPosts.slice(0, 3);  // Adjust number as needed
 
 <div class="colorbox" style="background-color:rgb(154, 101, 224);">
 	
-<h2  style="color:white;">Latest blog post!</h2>
+<h2  style="color:white; margin-bottom: 0.5em;">Latest blog post!</h2>
 	  
 	
 	<div class="centerbox" >		
@@ -73,7 +74,7 @@ const featuredPosts = allPosts.slice(0, 3);  // Adjust number as needed
 								
 									<a href={`/blog/${post.slug}/`}>
 										<img width="100%" height="100%" src={post.data.heroImage} alt="" />
-										<h4 style="color:#fff;" class="title">{post.data.title}</h4></a>
+										<h4 style="color:#fff; margin-top:0.5em;" class="title">{post.data.title}</h4></a>
 										<p class="date">
 											<FormattedDate date={post.data.pubDate} />
 										</p>
@@ -86,11 +87,6 @@ const featuredPosts = allPosts.slice(0, 3);  // Adjust number as needed
 		</div> 
 	</div>	
 </div>
-<div class="rowbox" style="gap:2em">
-<div class="colorbox" style="background-color:rgb(233, 220, 42); margin-top: 2.5em;">
-<h2 style="color:rgb(255, 255, 255)"> Random cat generator</h2>
-<img src="https://cataas.com/cat/says/cats are cool?fontSize=64&fontColor=white">
-</div>	
 
 <div class="colorbox" style="background-color:rgb(51, 226, 130); margin-top: 2.5em;">
 	<h5 style="color:rgb(255, 255, 255); margin-bottom:1em"> ...</h5>
