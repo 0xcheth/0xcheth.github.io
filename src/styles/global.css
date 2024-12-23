@@ -165,6 +165,7 @@ code {
 	flex-direction: row;
 	margin-top: 0em;
 	margin-bottom: 0em;
+	gap: 2em;
 	
 }
 
@@ -338,7 +339,11 @@ hr {
         align-items: center; /* Center vertically */
         text-align: left; /* Center-align the text itself */
 		flex-direction: column;
-	
+	}
+
+	.rowbox {
+		gap: 0em;
+
 	}
 
 	html {
