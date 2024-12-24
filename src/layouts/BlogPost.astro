@@ -57,7 +57,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
-			@media (max-width: 720px) {
+			@media (max-width: 1081px) {
 				.hero-image {
 					width: 100%;
 					margin: auto;
@@ -78,7 +78,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
+				<div class="hero-image" style="margin-top: 1.5em">
 					{heroImage && <img style="margin: 1em" width={720} height={480} src={heroImage} alt="" />}
 				</div>
 				<div class="prose">
