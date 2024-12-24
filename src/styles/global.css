@@ -99,7 +99,7 @@ ul {
 figcaption {
 	margin-top: 0px;
   font-size: 14px;
-  color: transparent; /* hidden by default */
+  color: grey; /* hidden by default */
 }
 
 /* Background color for blockquotes */
